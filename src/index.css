@@ -1,3 +1,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    align-content: center;
+    justify-content: center;
+    font-size: 2rem;
+    padding: 0.1rem;
+    border: 0.25rem solid lightblue;
+    border-radius: 1rem;
+  }
+
+  input[type="checkbox"]::before {
+    content: "";
+    width: 1.4rem;
+    height: 1.4rem;
+    clip-path: polygon(4% 45%, 3% 55%, 48% 96%, 95% 11%, 95% 3%, 47% 68%);
+    transform: scale(0);
+    background-color: wheat;
+  }
+
+  input[type="checkbox"]:checked::before {
+    transform: scale(1);
+  }
+
+  input[type="checkbox"]:hover {
+    color: black;
+  }
+  
+  
+  
+
